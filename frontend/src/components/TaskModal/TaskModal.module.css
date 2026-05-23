@@ -1,0 +1,161 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 32px 24px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.header h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.closeBtn {
+  background: #f7fafc;
+  color: #718096;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+  transform: rotate(90deg);
+}
+
+.modal form {
+  padding: 32px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  font-size: 15px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.multiSelect {
+  height: 140px;
+}
+
+.hint {
+  display: block;
+  margin-top: 8px;
+  color: #a0aec0;
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.btnCancel {
+  background: #f7fafc;
+  color: #2d3748;
+  padding: 12px 24px;
+}
+
+.btnCancel:hover {
+  background: #e2e8f0;
+}
+
+.btnSubmit {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  padding: 12px 32px;
+  font-weight: 700;
+}
+
+.btnSubmit:hover {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+}

@@ -1,0 +1,161 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  border-left: 5px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.card.low {
+  border-left-color: #48bb78;
+}
+
+.card.medium {
+  border-left-color: #ed8936;
+}
+
+.card.high {
+  border-left-color: #e53e3e;
+}
+
+.card.completed {
+  background: #f7fafc;
+  opacity: 0.8;
+}
+
+.content {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.card.completed .title {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.priorityBadge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.priorityLow {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.priorityMedium {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.priorityHigh {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  font-size: 15px;
+}
+
+.card.completed .description {
+  color: #a0aec0;
+}
+
+.metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.tag {
+  color: #718096;
+  background: #edf2f7;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btnComplete {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.btnComplete:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+.btnReopen {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.btnReopen:hover {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+}
+
+.btnDelete {
+  background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+  padding: 10px 16px;
+  font-size: 13px;
+  min-width: auto;
+}
+
+.btnDelete:hover {
+  background: linear-gradient(135deg, #c53030 0%, #9b2c2c 100%);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  
+  .actions {
+    width: 100%;
+  }
+  
+  .actions button {
+    flex: 1;
+  }
+}
