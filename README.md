@@ -317,8 +317,8 @@ REACT_APP_API_URL=http://localhost:8000
 Desenvolvido por **Kauã Torres** como parte do processo seletivo para Desenvolvedor Python (Back-end) na **Advice Health**.
 
 📧 Email: [kauatorresfranca2@gmail.com]  
-💼 LinkedIn: [seu-linkedin]  
-🐙 GitHub: []
+💼 LinkedIn: [https://www.linkedin.com/in/kauatorres/]  
+🐙 GitHub: [https://github.com/kauatorresfranca]
 
 ---
 
