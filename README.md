@@ -248,3 +248,80 @@ todo-app/
 │       └── ci.yml           # GitHub Actions CI/CD
 ├── docker-compose.yml       # Orquestração de containers
 └── README.md
+
+---
+
+## 🎯 Pontuação Alcançada
+
+| Requisito | Pontos | Status |
+|-----------|--------|--------|
+| CRUD de Tarefas | 10 | ✅ |
+| React | 2 | ✅ |
+| Docker + Docker Compose | 2 | ✅ |
+| Django REST Framework | 2 | ✅ |
+| Testes pytest | 2 | ✅ |
+| Testes Selenium | 1 | ✅ |
+| CI/CD | 1 | ✅ |
+| **TOTAL** | **20** | **✅** |
+
+---
+
+## 📝 Endpoints da API
+
+### Autenticação
+- `POST /api/auth/register/` - Registrar usuário
+- `POST /api/auth/token/` - Login (retorna JWT)
+- `POST /api/auth/token/refresh/` - Refresh token
+- `GET /api/auth/users/` - Listar usuários (para compartilhamento)
+
+### Tarefas
+- `GET /api/tasks/` - Listar tarefas (com filtros e paginação)
+- `POST /api/tasks/` - Criar tarefa
+- `GET /api/tasks/{id}/` - Detalhes de uma tarefa
+- `PATCH /api/tasks/{id}/` - Atualizar tarefa
+- `DELETE /api/tasks/{id}/` - Deletar tarefa
+- `POST /api/tasks/{id}/toggle_complete/` - Toggle status
+
+### Categorias
+- `GET /api/categories/` - Listar categorias
+- `POST /api/categories/` - Criar categoria
+- `DELETE /api/categories/{id}/` - Deletar categoria
+
+**Filtros disponíveis:**
+- `?is_completed=true/false` - Filtrar por status
+- `?priority=low/medium/high` - Filtrar por prioridade
+- `?category={id}` - Filtrar por categoria
+- `?search={termo}` - Buscar por título/descrição
+
+---
+
+## 🔐 Variáveis de Ambiente
+
+### Backend (Docker)
+```env
+DOCKER_ENV=1                    # Ativa PostgreSQL
+POSTGRES_DB=todoapp
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+```
+
+### Frontend
+```env
+REACT_APP_API_URL=http://localhost:8000
+```
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Kauã Torres** como parte do processo seletivo para Desenvolvedor Python (Back-end) na **Advice Health**.
+
+📧 Email: [kauatorresfranca2@gmail.com]  
+💼 LinkedIn: [seu-linkedin]  
+🐙 GitHub: []
+
+---
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para fins de avaliação técnica.
